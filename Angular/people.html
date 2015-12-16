@@ -1,0 +1,29 @@
+<html ng-app="peopleApp">
+<head>
+ <title>Angular example</title>
+<table class="table table-striped table-bordered">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.js"></script>
+
+ <script src="people.js"></script>
+ <tr>
+ 	<th>#</th>
+ 	<th>First Name</th>
+ 	<th>Last Name</th>
+ 	<th>DOB</th>
+ 	<th>Rate</th>
+ </tr>
+</head>
+
+<body>
+<div ng-controller="peopleController">
+<tr ng-repeat="p in people">
+	<td>{{$index + 1}}</td>
+	<td>{{p.firstname}}</td>
+	<td>{{p.lastname}}</td>
+	<td>{{p.dob}}</td>
+	<td>{{p.hourlyRate}}</td>
+</tr>		
+</div>
+</body>
+</html>
